@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,8 +73,24 @@
             color: white;
             font-size: 1.5em;
         }
+
+        @media (max-width: 450px) {
+
+            .row {
+                flex-direction: column;
+            }
+
+            .liquid-left-box {
+                width: 300px;
+                background-color: #5151E5;
+                color: white;
+                font-size: 1.5em;
+            }
+
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -94,25 +111,25 @@
             <h2>Liquid Left</h2>
             <div class="box liquid-left-box" id="liquidLeftBox">Loading...</div>
         </div>
-    </div>   
-    
+    </div>
+
     <script type="module">
         // Import Firebase SDK
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
         import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-      
+
         // Your Firebase configuration
         const firebaseConfig = {
-              apiKey: "AIzaSyCoCKy3PmVrUeoa15iFqeVoZXHfeIfMAzQ",
-  authDomain: "myetekk-ec809.firebaseapp.com",
-  databaseURL: "https://myetekk-ec809-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "myetekk-ec809",
-  storageBucket: "myetekk-ec809.appspot.com",
-  messagingSenderId: "801549173670",
-  appId: "1:801549173670:web:8e138b63ab90107d604567",
-  measurementId: "G-9HW4805YK9"
+            apiKey: "AIzaSyCoCKy3PmVrUeoa15iFqeVoZXHfeIfMAzQ",
+            authDomain: "myetekk-ec809.firebaseapp.com",
+            databaseURL: "https://myetekk-ec809-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "myetekk-ec809",
+            storageBucket: "myetekk-ec809.appspot.com",
+            messagingSenderId: "801549173670",
+            appId: "1:801549173670:web:8e138b63ab90107d604567",
+            measurementId: "G-9HW4805YK9"
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
@@ -143,4 +160,5 @@
         });
     </script>
 </body>
+
 </html>
